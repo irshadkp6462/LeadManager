@@ -1,0 +1,62 @@
+#schema:Lead
+#fields:[name,mobile,email,college,qualification,passout_year,course,course_mode,status,created_date]
+
+#Api for listing all Leads
+
+###
+GET http://127.0.0.1:8000/api/leads/
+
+
+#Api call  for addimg nw lead
+
+
+###
+POST http://127.0.0.1:8000/api/leads/
+Content-Type: application/json
+
+{
+
+    "name":"praveen",
+    "mobile":"7474636374",
+    "email":"praveen@gmail.com",
+    "college":"scrms",
+    "qualification":"mca",
+    "passout_year":"2020"
+}
+
+
+#Api for calling a specific lead details
+
+###
+GET http://127.0.0.1:8000/api/leads/1/
+Authorization: Basic admin1:admin1
+
+#api for updating a lead
+
+###
+PUT http://127.0.0.1:8000/api/leads/1/
+Content-Type: application/json
+Authorization: Basic admin1:admin1
+
+{
+  "id": 1,
+  "name": "raj",
+  "mobile": "7474636374",
+  "email": "praveen@gmail.com",
+  "college": "scrms",
+  "qualification": "mca",
+  "passout_year": "2020",
+  "source": "walkin",
+  "course": "PYTHON DJANGO",
+  "course_mode": "OFFLINE",
+  "status": "FOLLOWUP",
+  "created_date": "2025-02-24T06:57:37.909477Z",
+  "updated_at": "2025-02-24T06:57:37.909477Z"
+}
+
+
+#Api for deleting a specific lead details
+
+###
+DELETE  http://127.0.0.1:8000/api/leads/1/
+Authorization: Basic admin1:admin1
